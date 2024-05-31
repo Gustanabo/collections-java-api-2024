@@ -10,25 +10,25 @@ public class ListaTarefa {
         this.tarefaList = new ArrayList<>();
     }
 
-    public void adicionarTarefa(String descricao){
+    public void adicionarTarefa(String descricao) {
         tarefaList.add(new Tarefa(descricao));
-    }    
+    }
 
-    public void removerTarefa(String descricao){
+    public void removerTarefa(String descricao) {
         List<Tarefa> tarefasParaRemover = new ArrayList<>();
         for (Tarefa t : tarefaList) {
-            if (t.getDescricao().equalsIgnoreCase(descricao)){
+            if (t.getDescricao().equalsIgnoreCase(descricao)) {
                 tarefasParaRemover.add(t);
             }
         }
         tarefaList.removeAll(tarefasParaRemover);
     }
 
-    public int obterNumeroTotalTarefas (){
+    public int obterNumeroTotalTarefas() {
         return tarefaList.size();
     }
 
-    public void obterDescricoesTarefas(){
+    public void obterDescricoesTarefas() {
         System.out.println(tarefaList);
     }
 
